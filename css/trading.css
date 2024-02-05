@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+section{
+    width:1000px;
+    max-width:90%;
+    margin:200px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.product{
+    width:300px;
+    height: auto;
+    border:3px solid wheat;
+}
+h3{
+    display: unset;
+}
