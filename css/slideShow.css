@@ -3,6 +3,9 @@
     padding:0;
     box-sizing: border-box;
 }
+.slidshow-Container{
+    position:relative;
+}
 #images{
     width:100%;
 }
