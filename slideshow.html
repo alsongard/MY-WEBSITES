@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/slideShow.css">
-    <title>Slideshow</title>
+    <title>Slide Show Tutorial</title>
+    <link rel="stylesheet" href="./css/slideshow.css">
 </head>
 <body>
+    <h1 style="text-align: center;">My Slide Show</h1>
     <div class="slideshow-Container">
-        <div class="mySlides fade">
-            <div class="number-text"><p>1/4</p></div>
-            <img src="./img/backiee-25778-landscape.jpg" id="images">
-            <div class="caption-Text"><p>Caption 1</p></div>
+        <div class="mySlides">
+            <h3 class="number">1/4</h3>
+            <img src="./img/backiee-60279-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption one</p>
         </div>
-        <div class="mySlides fade">
-            <div class="number-text"><p>2/4</p></div>
-            <img src="./img/backiee-47130-landscape.jpg" id="images">
-            <div class="caption-Text"><p>Caption 2</p></div>
+        <div class="mySlides">
+            <h3 class="number">2/4</h3>
+            <img src="./img/backiee-79319.jpg" alt="nature">
+            <p class="caption-text">Caption two</p>
         </div>
-        <div class="mySlides fade">
-            <div class="number-text"><p>3/4</p></div>
-            <img src="./img/backiee-55830-landscape.jpg" id="images" >
-            <div class="caption-Text"><p>Caption 3</p></div>
+        <div class="mySlides">
+            <h3 class="number">3/4</h3>
+            <img src="./img/backiee-82528-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption three</p>
         </div>
-        <div class="mySlides fade">
-            <div class="number-text"><p>4/4</p></div>
-            <img src="./img/backiee-64732-landscape.jpg" id="images">
-            <div class="caption-Text"><p>Caption 4</p></div>
+        <div class="mySlides">
+            <h3 class="number">4/4</h3>
+            <img src="./img/backiee-88224-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption four</p>
         </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094</button>
+        <button class="next" onclick="plusSlides(1)">&#10095</button>
     </div>
-    <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
-    <a class="next"  onclick="plusSlides(1)" >&#10095; </a>
-    <br>
-    <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        
+    <div  class="dot-container" style="text-align: center;">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
     </div>
-    <script src="./js/slideShow.js"></script>
+    <script src="./js/slideshow.js"></script>
 </body>
 </html>

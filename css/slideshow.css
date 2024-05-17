@@ -1,0 +1,50 @@
+.slideshow-Container{
+    width:1000px;
+    max-width:100%;
+    margin:0 auto 80px; 
+    position: relative;
+}
+.slideshow-Container img{
+    width:100%;
+    animation-name: slide;
+    animation-duration: 5s;
+    height: auto;
+}
+.slideshow-Container .number{
+    position: absolute;
+    top:0;
+    left:10px;
+    color: red;
+}
+.caption-text{
+    position: absolute;
+    color:red;
+    width:100%;
+    text-align: center;
+}
+button{
+    margin-top:30px;
+    position: absolute;
+    top:45%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    color:antiquewhite;
+}
+.next{
+    right:10px;
+}
+.prev{
+    left:10px;
+}
+.dots{
+    height:20px;
+    width:20px;
+    background-color: rebeccapurple;
+    display: inline-block;
+    border-radius: 50%;
+}
+@keyframes slide{
+    from {opacity: .4;}
+    to {opacity:5;}
+}
