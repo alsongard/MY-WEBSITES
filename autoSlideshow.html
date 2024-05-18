@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Slideshow</title>
+    <link rel="stylesheet" href="./css/autoSlide.css">
+</head>
+<body>
+    <h1 style="text-align: center;">My Auto Slideshow</h1>
+    <div class="slideshow-Container">
+        <div class="mySlides">
+            <h3 class="number">1/4</h3>
+            <img src="./img/backiee-60279-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption one</p>
+        </div>
+        <div class="mySlides">
+            <h3 class="number">2/4</h3>
+            <img src="./img/backiee-79319.jpg" alt="nature">
+            <p class="caption-text">Caption two</p>
+        </div>
+        <div class="mySlides">
+            <h3 class="number">3/4</h3>
+            <img src="./img/backiee-82528-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption three</p>
+        </div>
+        <div class="mySlides">
+            <h3 class="number">4/4</h3>
+            <img src="./img/backiee-88224-landscape.jpg" alt="nature">
+            <p class="caption-text">Caption four</p>
+        </div>
+        <button class="prev" onclick="plusSlides(-1)">&#10094</button>
+        <button class="next" onclick="plusSlides(1)">&#10095</button>
+    </div>
+    <div  class="dot-container" style="text-align: center;">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+    </div>
+    <script src="./js/autoSlide.js"></script>
+</body>
+</html>
