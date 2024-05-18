@@ -8,6 +8,7 @@
     width:100%;
     animation-name: slide;
     animation-duration: 5s;
+    transition: ease-in-out;
     height: auto;
 }
 .slideshow-Container .number{
