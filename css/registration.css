@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+#home
+{
+    background: linear-gradient(to left top, rgba(163, 163, 231, 0.836),rgba(51, 143, 204, 0.63)),url("../img/backiee-25528-landscape.jpg");
+    height: 100vh;
+    width:100vw;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form
+{
+    text-align: center;
+    width:700px;
+    padding:40px 50px;
+    height:auto;
+    border:4px solid rgba(236, 238, 238, 0.705);
+    border-radius: 10px;
+}
+form h1
+{
+    font-size:30px;
+}
+.input-container
+{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    background-color: rgba(92, 200, 207, 0.705);
+    margin:10px 0;
+}
+.input-container i
+{
+    margin-right: 15px;
+}
+form input
+{
+    width:100%;
+    padding:3.5px 0 3.5px 10px;
+    border:none;
+    border-radius: 2px;
+    background: transparent;
+    font-size: 20px;
+}
+.btn-container .signin
+{
+    background-color: unset;
+    background-color: #464444af;
+    border:none;
+}
+form button
+{
+    padding:4.5px 0 7px 0;
+    font-size: 23px;
+    margin:15px 0 0;
+    width: 40%;
+    border-radius: 2px;
+    /* border:2px solid rgba(92, 200, 207, 0.705); */
+    text-transform: capitalize;
+    border-radius: 5px;
+    background-color: white;
+    border:none;
+}
+.btn-container
+{
+    width:80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    /* border:2px solid black; */
+    padding:10px 0;
+}
