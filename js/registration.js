@@ -11,11 +11,9 @@ loginBtn.addEventListener("click", ()=>{
     userField.style.display = "none";
     idField.style.display = "none";
     confirmField.style.display = "none";
-    if (signupbtn.style.backgroundColor === "white")
-    {
-        loginBtn.style.backgroundColor = "white";
-        signupbtn.style.backgroundColor= "#555";
-    };
+    signupbtn.classList.remove("active");
+    loginBtn.classList.add("active");
+
 });
 
 signupbtn.addEventListener("click", ()=>{
@@ -23,9 +21,6 @@ signupbtn.addEventListener("click", ()=>{
     userField.style.display = "flex";
     idField.style.display = "flex";
     confirmField.style.display = "flex";
-    if (loginBtn.style.backgroundColor === "white")
-    {
-        signupbtn.style.backgroundColor = "white";
-        loginBtn.style.backgroundColor ="#555";
-    }
+    signupbtn.classList.add("active");
+    loginBtn.classList.remove("active");
 });
