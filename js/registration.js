@@ -1,17 +1,19 @@
-let title = document.getElementById("title");
-let userField = document.getElementById("username_field");
-let idField = document.getElementById("id_field");
-let signupbtn = document.getElementById("signupbtn");
-let signinbtn = document.getElementById("signinbtn");
+const title = document.getElementById("title");
+const userField = document.getElementById("username_field");
+const idField = document.getElementById("id_field");
+const confirmField = document.getElementById("confirm_field");
+const signupbtn = document.getElementById("signupbtn");
+const loginBtn = document.getElementById("loginBtn");
 
 
-signinbtn.addEventListener("click", ()=>{
+loginBtn.addEventListener("click", ()=>{
     title.innerHTML = "Sign in";
     userField.style.display = "none";
     idField.style.display = "none";
+    confirmField.style.display = "none";
     if (signupbtn.style.backgroundColor === "white")
     {
-        signinbtn.style.backgroundColor = "white";
+        loginBtn.style.backgroundColor = "white";
         signupbtn.style.backgroundColor= "#555";
     };
 });
@@ -19,9 +21,11 @@ signinbtn.addEventListener("click", ()=>{
 signupbtn.addEventListener("click", ()=>{
     title.innerHTML = "Sign up";
     userField.style.display = "flex";
-    if (signinbtn.style.backgroundColor === "white")
+    idField.style.display = "flex";
+    confirmField.style.display = "flex";
+    if (loginBtn.style.backgroundColor === "white")
     {
         signupbtn.style.backgroundColor = "white";
-        signinbtn.style.backgroundColor ="#555";
+        loginBtn.style.backgroundColor ="#555";
     }
 });
