@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style> 
+        *{
+            margin:0;
+        }
+        .slideshow-container
+        {
+            max-width:100vw;
+            height: 98vh;
+            position:relative;
+            overflow: hidden;
+            transition: ease 0.90s;
+        }
+        .mySlides{
+            display: none;
+            position: relative;
+            /* border:2px solid red; */
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top:50%;
+            background:  rgba(148, 132, 129, 0.527) ;
+            font-size: 30px;
+            border:none;
+            padding:5px;
+            border-radius: 5px;
+            transition: ease-in-out 0.70s;
+        }
+        .prev{
+            left:2%;
+        }
+        .next{
+            right: 2%;
+        }
+        .next:hover, .prev:hover{
+            /* color: rgb( 228, 217, 89 ); */
+            color:white;
+            background-color: black;
+        }
+        img{
+            background-position: center;
+            background-size: contain;
+        }
+        .caption-text{
+            text-align:center;
+            position: absolute;
+            top:90%;
+            margin:0 auto;
+            width:100%;
+            color:white;
+        }
+        .numberText{
+            position: absolute;
+            color:white;
+            left:20px;
+        }
+        .dot{
+            background-color: rgb(207, 201, 187);
+            height: 15px;
+            width: 15px;
+            border-radius:10%;
+            cursor: pointer;
+            margin-bottom: 2px;
+            display: inline-block;
+        }
+        .dot-container{
+            text-align: center;
+        }
+        .active, .dot:hover{
+            background-color: rgb(226, 212, 62)  ;
+        }
+        .fade{
+            animation-name:  fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade{
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+    </style>
+</head>
+<body>
+    <!--slideshow container-->
+    <div class="slideshow-container">
+        <!-------full width images with number and caption text-->
+        <div class="mySlides fade">
+            <p class="numberText">1/5</p>
+            <img style="width:100%" src="./images/backiee-19212-landscape.jpg" alt="1"/>
+            <p class="caption-text">Caption 1</p>
+        </div>
+        <div class="mySlides fade">
+            <p class="numberText">2/5</p>
+            <img style="width:100%" src="./images/backiee-48541.jpg" alt="2"/>
+            <p class="caption-text">Caption 2</p>
+        </div>
+        <div class="mySlides fade">
+            <p class="numberText">3/5</p>
+            <img style="width:100%" src="./images/backiee-74477-landscape.jpg" alt="3"/>
+            <p class="caption-text">Caption 3</p>
+        </div>
+        <div class="mySlides fade">
+            <p class="numberText">4/5</p>
+            <img style="width:100%" src="./images/backiee-76410-landscape.jpg" alt="4"/>
+            <p class="caption-text">Caption 4</p>
+        </div>
+        <div class="mySlides fade">
+            <p class="numberText">5/5</p>
+            <img style="width:100%" src="./images/backiee-818-landscape.jpg" alt="5"/>
+            <p class="caption-text">Caption 5</p>
+        </div>
+
+        <!-- The slide fade div is the image, caption text and numberText contianer
+        repeat according to the number of times you want for your image -->
+
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    </div>
+
+    <br>
+    <!-- NOT A MUST -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <script type="text/javascript">
+        let i;
+        let slideIndex = 1;// this is used to select the first array element in slides[1 -1].style.display
+        let dots = document.getElementsByClassName("dot");
+        let slides = document.getElementsByClassName("mySlides");
+        // console.log(dot);
+        // console.log(`typeof slides is  ${typeof(slides)}`);
+        // const values = Object.values(slides)
+        // console.log(values)
+        function showSlides(n){
+            // assuming that the n variable is added several times
+            // up to 5 = slides.length, and it goes to 6, it's reset to 6 
+            // for the plusSlide() function 
+            // checks if the variable n is less than 5(slides.length)
+            if (n > slides.length){
+                slideIndex = 1;
+            }
+            // if n is less than 1, it's set to 5
+            // however if n variable is subracted to 0, this goes for the plusSlides(-1)
+            // it is reset to slides.length == 5.
+            // which will then be subtracted to 4 and represent
+            // the fourth array in slides.
+
+            if (n < 1){
+                slideIndex = slides.length;
+            }
+            // if i'm correct, this will set the display of the
+            // previous image to none. 
+            for (i = 0; i <slides.length; i++)
+            {
+                slides[i].style.display = "none";
+            }
+            // the same goes for this statement it's used to 
+            // remove the active style for the previous button after
+            // moving to next
+            for (i = 0; i < dots.length; i++){
+                dots[i].className =dots[i].className.replace(" active", "");
+            }
+            // the slideIndex variable is now 5
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex -1].className += " active";
+            console.log(slides[slideIndex - 1]);
+        }
+        showSlides(slideIndex);
+
+        // my understanding
+        // on plusSlides(1), if someone clicks on the given button
+        // slideindex is incremented by 1, which is given as the argument n
+        //
+        function plusSlides(n){
+            showSlides(slideIndex += n);
+        }
+        // each of the dots is assigned the below function and has an argument
+        // on clicking each will change the slideIndex value to their argument
+        function currentSlide(n){
+            showSlides(slideIndex = n);
+        }
+    </script>
+</body>
+</html>
