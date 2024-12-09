@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="myParagraph"> Hello I am Back to Studying and Doing Research</p>
+        <button id="changeColor">Change Background Color</button>
+    </div>
+
+    <script type="text/javascript">
+        let myBtn = document.getElementById("changeColor");
+        let myPara = document.getElementById("myParagraph");
+        function changeColor()
+        {
+            console.log("I will change my color");
+            myPara.classList.toggle("hide");
+        };
+
+        myBtn.addEventListener("click", changeColor)
+    </script>
+</body>
+</html>
