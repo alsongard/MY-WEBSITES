@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        img{
+            height: 100px;
+            width:100px;
+            position:absolute;
+            z-index:-1;
+        }
+        p{
+            color:red;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/backiee-64732-landscape.jpg">
+    <p>I will appear infront of the image. The image will be assigned a negative z-index value</p>
+    <h2 style="margin-top:150px ;">Complex z-index</h2>
+    <br>
+    <p>To use z index the following must be used:</p>
+    <ul>
+        <li>The elements must have a position style that is fixed, absolute, relative and absolute and on flex child elements.</li>
+        <li> An element with a higher stack value will always be above or on top of an element with a lower stack value(index)</li>
+    </ul>
+    <div style=" height: 200px; width: 1000px; position: relative; border:2px solid black;">
+        <div style="background-color: rgb(0, 140, 255); z-index: 5; top:2px; left:5px;"></div>
+        <div style="background-color: rgb(224, 19, 224);  z-index: 6; top:15px; left:20px;"></div>
+        <div style="background-color: green; z-index: 7; top:25px; left:35px;"></div>
+        <div style="background-color: yellow;  z-index: 8; top:35px; left:55px;"></div>
+        <div style="background-color: rgb(0,12, 211); z-index:9; top:45px; left:75px;"></div>
+        <div style="background-color: rgb(200,15,15); z-index:10; top:55px; left:95px;"></div>
+    </div>
+
+    <p>The code for the above is shown below: </p>
+    <pre>
+    &lt;p&gt;Hello World&lt;/p&gt
+    &lt;div style=" height: 200px; width: 1000px; position: relative; border:2px solid black;"&gt; &lt;/div &gt;
+        &lt; div style="background-color:  rgb(0, 140, 255); z-index: 5; top:2px; left:5px;"&gt; &lt;/div&gt;
+        &lt; div style="background-color: rgb(224, 19, 224);  z-index: 6; top:15px; left:20px;"&gt; &lt;/div&gt;
+        &lt; div style="background-color: green; z-index: 7; top:25px; left:35px;"&gt; &lt;/div&gt;
+        &lt; div style="background-color: yellow;  z-index: 8; top:35px; left:55px;"&gt; &lt;/div&gt;
+        &lt; div style="background-color: rgb(0,12, 211); z-index:9; top:45px; left:75px;"&gt; &lt;/div&gt;
+        &lt; div style="background-color: rgb(200,15,15); z-index:10; top:55px; left:95px;"&gt; &lt;/div&gt;
+    &lt;/div &gt
+    </pre>
+</body>
+</html>
