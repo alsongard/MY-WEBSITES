@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3Schools animation tutorial</title>
+    <style>
+        @keyframes example{
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            border:2px solid;
+            border-color: black;
+            background-color: red;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        @keyframes experimental2{
+            0% {background-color:aqua ;}
+            20% {background-color: rgb(70, 70, 209);}
+            40% {background-color: rgb(65, 216, 133);}
+            60% {background-color: rgb(216, 50, 202);}
+            80% {background-color: rgb(191, 216, 50);}
+            100% {background-color: rgb(216, 50, 50);}
+        }
+        .animation2{
+            border: 2px solid blue;
+            width:200px;
+            height:200px;
+            background-color: aqua;
+            animation-name:experimental2;
+            animation-duration:60s;
+        }
+    </style>
+</head>
+<body>
+    <!-- changing color using keyframe-rule example, using from {style} and to {style} -->
+    <div>
+        <p>eXample 1</p>
+    </div>
+
+    <br>
+    <!-- changing color using keyframe-rule experimental2 which uses percentage values -->
+    <div class="animation2"></div>
+</body>
+</html>
