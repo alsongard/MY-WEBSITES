@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
     <style>
-        div{
+        .div1{
             width: 100px;
             height: 100px;
             background-color: red;
@@ -17,10 +17,47 @@
             from {left: 0px;};
             to {left: 200px;};
         }
+        
+        @keyframes barLine {
+            from {scale:  0 0;}
+            to {scale: 1 1;}
+        }
+        .durationEffect{
+            width:100%;
+            height: 10px;
+            background-color: rgb(85, 216, 85);
+            animation-name:barLine;
+            animation-duration:60s;
+            animation-iteration-count: 10;
+            animation-timing-function: ease; /*default*/
+        }
+
 
     </style>
 </head>
 <body>
-    <div></div>
+    <div class="div1"></div>
+    <br>
+
+    <!-- ease : start slow, then fast and end slow -->
+    <div class="durationEffect"></div>
+
+    <br>
+    <!-- ease-in slow start -->
+    <div class="durationEffect" style="animation-timing-function: ease-in;"></div>
+
+    <br>
+    <!-- ease-out : end slow -->
+    <div class="durationEffect" style="animation-timing-function: ease-out;"></div>
+
+    <br>
+    <!-- linear -->
+    <div class="durationEffect" style="animation-timing-function: linear;">
+    </div>
+
+    <br>
+    <!--linear with transform-origin:left;  -->
+    <div class="durationEffect" style="animation-timing-function: linear; transform-origin: left;">
+    </div>
 </body>
 </html>
