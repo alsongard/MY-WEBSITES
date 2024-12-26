@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .heading{
+        font-size: 45px;
+        margin-bottom: 0px;
+        text-align: center;
+        letter-spacing: 10px;
+        color: #777;
+        }
+        .wrapper{
+            width: 85%;
+            margin: 80px auto;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            justify-content: space-between;
+        }
+        .single-image{
+            width: 500px;
+            margin: 0 20px;
+            transition: .7s;
+        }
+        .single-image img{
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .single-image:hover{
+            cursor: pointer;
+            transform: scale(1.5, 1.5);
+        }
+        .single-image img:hover{
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Loaders</h1>
+    <div class="wrapper">
+        <div class="single-image">
+            <img src="./img/backiee-64732-landscape.jpg" alt="">
+        </div>
+        <div class="single-image">
+            <img src="./img/backiee-55830-landscape.jpg" alt="">
+        </div>
+        <div class="single-image">
+            <img src="./img/backiee-25778-landscape.jpg" alt="">
+        </div>
+        <div class="single-image">
+            <img src="./img/backiee-25880-landscape.jpg" alt="">
+        </div>
+        <div class="single-image">
+            <img src="./img/backiee-36274-landscape.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
