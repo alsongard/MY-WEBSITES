@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Feature</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .parentContainer{
+            height: 500px;
+            width: 1000px;
+            position: relative;
+            border:2px solid;
+            border-color: rgb(10,1,10);
+            margin: 30px auto;
+            padding: 80px;
+            display: flex;
+        }
+        @keyframes sizeChange{
+            from {background-color: green; left:140px }
+            to {background-color: red; transform: scale(2, 1.4); left:500px;}
+        }
+        .child{
+            border:2px solid black;
+            height: 150px;
+            width:150px;
+            position:absolute;
+            animation-name: sizeChange;
+
+            /* animation-name: sizeChange;
+            animation-duration: 10s;
+            animation-delay:1s;
+            animation-timing-function: linear; */
+        }
+        .child:hover{
+            cursor: pointer;
+            /* transform: scale(2, 1.4); */
+            animation-duration: 2s;
+            animation-delay:1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parentContainer">
+        <div class="child" style="background-color: red;"></div>
+        <div class="child" style="background-color: purple; top:110px; left: 100px"></div>
+        <div class="child" style="background-color: aqua; top:130px; left: 120px"></div>
+        <div class="child" style="background-color: green; top:150px; left: 140px;"></div>
+    </div>
+
+
+    <h1>
+        
+    </h1>
+</body>
+</html>

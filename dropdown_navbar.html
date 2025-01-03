@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Drop Down Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+        }
+        .navbar a{
+            text-decoration: none;
+            color:white;
+        }
+        .dropdown{
+            display: relative;
+        }
+        .dropdown-content{
+            position: absolute;
+            margin-left: 30px;
+            top:30px;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            display: none;
+        }
+        .dropdown{
+            display:flex ;
+        }
+        body{
+            background-image: url(./img/backiee-36274-landscape.jpg);
+        }
+        .dropBtn{
+            background: transparent;
+            border:none;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <div class="dropdown">
+            <button class="dropBtn">
+                DropDown
+                <i class='bx bx-down-arrow' ></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let dropBtn = document.querySelector(".dropBtn");
+        let dropDownContent = document.querySelector(".dropdown-content");
+        dropBtn.addEventListener("click", ()=>{
+            console.log("display hidden dropdown menu");
+            dropDownContent.classList.toggle("dropdown")
+        })
+    </script>
+</body>
+</html>
