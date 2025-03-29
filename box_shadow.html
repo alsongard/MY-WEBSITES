@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding: 0;
+        }
+        #firstBox
+        {
+            height: 50px;
+            width: 50px;
+            /* border:2px solid black; */
+            box-shadow:10px 10px;
+            color:red;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(17, 13, 13, 0.336);">
+    <h1>Learning box shadow property</h1>
+
+    
+    <h1 style="text-shadow:0 10px;">Welcome</h1>
+    <p style="text-shadow:2px 2px red">Good Day</p>
+    
+
+    <p style="text-shadow:0 10px">Welcome</p>
+    <p style="text-shadow:0 2px 5px blue">Project Mars</p>
+
+
+    <section style="display: flex; flex-direction:column; justify-content: flex-start; background-color: rgb(185, 209, 209); ">
+        <p>Simplest form </p>
+        <div id="firstBox">
+        </div>
+        <hr style="margin-top:20px;">
+
+        <p >Setting box-shadow color</p>
+        <div style="box-shadow:10px 10px black;height:50px;width:50px;">
+        </div>
+
+        <hr style="margin-top:20px;">
+        <p >Setting box-shadow color and blur</p>
+        <div style="box-shadow: 10px 10px 5px blueviolet; height: 50px; width:50px;">
+        </div>
+
+        <hr style="margin-top:20px;">
+
+        <div style="box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 10px 5px rgba(0, 0, 0, 0.19); height: 50px; width:50px;">
+        </div>
+
+        <hr style="margin-top:10px">
+        <div style="box-shadow: 0px 0px 10px 2px black; height: 100px; width:100px;"></div>
+        
+    </section>
+
+
+
+</body>
+</html>
