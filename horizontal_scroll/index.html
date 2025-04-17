@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            
+        }
+        .home
+        {
+            height: 100vh;
+            width: 100vw;
+            background-image:url("../img/20250417_2245_Traffic Light Trail_simple_compose_01js2md4vye32a157q8y1fk5xs.png"), linear-gradient( rgb(11, 14, 8),rgba(179, 182, 162, 0.322));
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size:19px;
+        }
+        .title
+        {
+            font-size: 23px;
+            text-align: center;
+        }
+        .scroll-watcher
+        {
+            position: fixed;
+            height: 8px;
+            width: 100vw;
+            background-color: lime;
+            scale: 0.5 1;
+            animation-name:animation-scroll-move;
+            animation-timeline: scroll(y);
+            animation-timing-function: linear;
+        }
+        @keyframes animation-scroll-move{
+            to {scale: 1 1}
+        }
+        section h2
+        {
+            font-size:20px;
+            text-transform: capitalize;
+        }
+
+
+        .info-section{
+            padding:120px 50px;
+            background-color: black;
+            color:white;
+        }
+
+        .info-container
+        {
+            width:80%;
+            /* padding:100px 10px; */
+            /* background-color: red; */
+            margin:0 auto;
+        }
+        .info-container > h2{
+            font-size: 40px;
+            margin-bottom:10px;
+        }
+        .info-container > p
+        {
+            font-size: 20px;
+            margin:10px 0;
+            font-weight: 400;
+        }
+        .info-container > img
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-watcher"></div>
+    <section class="home">
+        <div>
+
+            <h1 class="title">CSS-only scroll-driven animations are 🔥 </h1>
+            <p>Scroll-driven animation was  something taht we used to rely on Javascript for, with the help of scroll listeners and intersecton observers</p>
+            <p>Luckily for use, scroll-driven animations are coming  to be a CSS feature, and they make life so much easier and  more performant.</p>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Eveniet, suspicit!</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+        </div>
+    </section>
+
+
+    <section class="info-section">
+        <div class="info-container">
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Eveniet, suspicit!</h2>
+
+            <img src="../img/backiee-245982-landscape.jpg"/>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+        </div>
+    </section>
+
+
+    <section class="info-section">
+        <div class="info-container">
+            <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Eveniet, suspicit!</h2>
+
+            <img src="../img/pexels-francesco-ungaro-96381 copy.jpg"/>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, magni consequatur! Odio, eum quos quo totam ipsum esse magnam cumque facere a laborum illum? Quisquam incidunt quia recusandae doloremque exercitationem!</p>
+        </div>
+    </section>
+</body>
+</html>
