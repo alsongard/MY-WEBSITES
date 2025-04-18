@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.sidebar
+{
+    border:2px solid red;
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    padding:0 10px;
+    position: absolute;
+    overflow-y: auto;
+    height: 100vh;
+}
+.sidebar > button
+{
+    padding:5px 0;
+    margin:10px 0;
+}
