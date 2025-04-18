@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+.home
+{
+    height: 100vh;
+    width: 100vw;
+    background-image:url("../../img/20250417_2245_Traffic Light Trail_simple_compose_01js2md4vye32a157q8y1fk5xs.png"), linear-gradient( rgb(11, 14, 8),rgba(179, 182, 162, 0.322));
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size:19px;
+}
+.title
+{
+    font-size: 23px;
+    text-align: center;
+}
+.scroll-watcher
+{
+    position: fixed;
+    height: 8px;
+    width: 100vw;
+    background-color: lime;
+    scale: 0.1 1;
+    animation-name:animation-scroll-move;
+    animation-timeline: scroll(block);
+    transform-origin: left;
+    animation-timing-function: linear;
+}
+@keyframes animation-scroll-move{
+    to {scale: 1 1}
+}
+section h2
+{
+    font-size:20px;
+    text-transform: capitalize;
+}
+
+
+.info-section{
+    padding:120px 50px;
+    background-color: black;
+    color:white;
+}
+
+.info-container
+{
+    width:80%;
+    margin:0 auto;
+}
+.info-container > h2{
+    font-size: 40px;
+    margin-bottom:10px;
+}
+.info-container > p
+{
+    font-size: 20px;
+    margin:10px 0;
+    font-weight: 400;
+}
+/* @keyframes list-animation
+{
+    to{
+        transform: translate(calc(-50% - 0.5rem));
+    }
+/*    0% {background-color: red;}
+    20% {background-color: white}
+    40% {background-color: black}
+    60% {background-color: purple}
+    80% {background-color: yellow}
+    100% {background-color: green}
+
+} */
+.stack-list
+{
+    list-style: none;
+    padding:15px 10px;
+    margin:20px auto ;
+    display: flex;
+    flex-direction: row;
+    max-width: 65%;
+    gap:50px;
+    border:2px solid white;
+    border-radius:10px;
+    overflow-x: auto;
+    /* animation-name: move-right;
+    animation-timeline: scroll(root);
+    animation-timing-function: linear; */
+}
+
+
+.stack-cube
+{
+    border-radius: 5px;
+    padding:10px;
+    background-color: rgba(8, 7, 7, 0.555);
+    box-shadow: 0px 0px 10px rgb(205, 205, 226);
+}
+
+.info-container > img
+{
+    width: 100%;
+}
+
+
+@media(prefers-reduced-motion: no-preference)
+{
+    /* animation for fade for the images */
+    /* opactiry = 0 clear transparent */
+    @keyframes fade-in{
+        to {scale: 1; opacity: 1;}
+    }
+
+    /* select images */
+    .info-container > img
+    {
+        width:100%;
+        scale: 0.5 1; opacity:0;
+        animation-fill-mode: forwards;
+        animation-name:fade-in;
+        animation-timing-function:linear;
+        animation-timeline: view();
+       /* animation-range-start:250px;
+        animation-range-end:150px;*/ /*delays by 100px*/
+        /* animation-range-start:150px;
+        animation-range-end: 700px; */
+        animation-range-start:cover;
+        animation-range-end:700px;
+    }
+}
