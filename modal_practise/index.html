@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="./css/index.css" />
+
+    <title>Modal PracDev</title>
+</head>
+<body class="bg-gray-300">
+
+    <div  style="margin-top:10px; margin-left:10px;">
+        <button id="getModal" >Open Modal</button>
+    </div>
+
+    <!--MODAL-->
+    <div id="main-model" class="main-model" >
+        <div class="modal-header">
+            <h1 style="font-size: 25px;">Modal Example</h1>
+            <div id="closeModal" style="font-size: 25px;">&times;</div>
+        </div>
+        <div class="model-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus similique aliquid dolore rem officiis? Quod beatae, officiis ratione suscipit nostrum error, culpa eaque sunt consequuntur vero nemo! Dignissimos, voluptatibus laudantium.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus similique aliquid dolore rem officiis? Quod beatae, officiis ratione suscipit nostrum error, culpa eaque sunt consequuntur vero nemo! Dignissimos, voluptatibus laudantium.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus similique aliquid dolore rem officiis? Quod beatae, officiis ratione suscipit nostrum error, culpa eaque sunt consequuntur vero nemo! Dignissimos, voluptatibus laudantium.
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+     <script>
+        const buttonModal = document.getElementById('getModal');
+        const mainModal = document.getElementById('main-model');
+        const closeModal = document.getElementById('closeModal');
+        const body = document.body;
+        
+        function changeStyle()
+        {
+            console.log('i Just got clicked');
+            mainModal.classList.toggle('main-active');
+            body.classList.toggle('body-inactive')
+        }
+        buttonModal.addEventListener('click',changeStyle)
+        closeModal.addEventListener('click',changeStyle)
+     </script>
+</body>
+</html>
