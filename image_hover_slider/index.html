@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Image Effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #textHover
+        {
+            position: absolute;
+            /* z-index: 10; */
+            bottom:0;
+            left:0;
+            width: 100%;
+            line-height: 300px;
+            top:0;
+            text-align: center;
+            transform: translateY(100%);
+            color:black;
+            transition: ease-in 0.5s;
+            background-image: linear-gradient(to top left, rgba(0, 0, 255, 0.233), rgba(128, 128, 128, 0.26));
+        }
+        .myImage
+        {
+            width: 100%;
+            height: 100%;
+            z-index: -1;   
+        }
+        .hover-box
+        {
+            width:300px;
+            height: 300px;
+            border:2px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+        .hover-box:hover #textHover
+        {
+            transform: translateY(0%);
+        }
+
+    </style>
+
+</head>
+<body>
+    <section style="display: flex; width: 100vw; flex-direction:row; justify-content:center; padding-top: 50px;">
+        <div class="hover-box">
+            <img class="myImage"  src="../img/backiee-47130-landscape.jpg" alt="backiee">
+            <p id='textHover'>Pray for me..</p>
+        </div>
+    </section>
+</body>
+</html>
